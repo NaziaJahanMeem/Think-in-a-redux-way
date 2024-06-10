@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Counter Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- import redux from cdn -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/redux@4.2.1/dist/redux.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="w-screen h-screen p-10 bg-gray-100 text-slate-700">
@@ -15,19 +28,21 @@
       </h1>
 
       <!-- counters -->
-      <div class="max-w-md mx-auto mt-10 space-y-5">
+      <div class="mx-auto max-w-md mt-10 space-y-5">
         <div
           class="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow"
         >
-          <div class="text-2xl font-semibold" id="counter">0</div>
+          <div id="counter" class="text-2xl font-semibold"></div>
           <div class="flex space-x-3">
             <button
+              id="increment"
               class="bg-indigo-400 text-white px-3 py-2 rounded shadow"
               id="increment"
             >
               Increment
             </button>
             <button
+              id="decrement"
               class="bg-red-400 text-white px-3 py-2 rounded shadow"
               id="decrement"
             >
