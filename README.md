@@ -1,1 +1,1 @@
-# think-in-a-redux-way
+# Rewrite the counter application
