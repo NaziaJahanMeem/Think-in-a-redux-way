@@ -1,1 +1,1 @@
-# combine reducers
+# Own Props with connect api
