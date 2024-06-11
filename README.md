@@ -1,1 +1,1 @@
-# think-in-a-redux-way
+# what is state management
