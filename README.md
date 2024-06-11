@@ -1,1 +1,1 @@
-# think-in-a-redux-way
+# Action payloads and creators
