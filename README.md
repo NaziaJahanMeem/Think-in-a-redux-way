@@ -1,1 +1,1 @@
-# store setup
+# To do list and todo
