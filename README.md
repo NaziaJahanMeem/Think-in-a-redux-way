@@ -1,1 +1,1 @@
-# defining reducers - todo slice
+# defining reducers - filters slice
