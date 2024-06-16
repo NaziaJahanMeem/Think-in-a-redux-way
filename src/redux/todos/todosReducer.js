@@ -9,7 +9,9 @@ import {
 import initialState from "./initialState";
 
 function nextTodosId(todos) {
-  const maxId = todos.reduce((maxId, todo) => Math.max(maxId, todo), -1);
+  const maxId = todos.reduce((maxId, todo) => {
+    return Math.max(maxId, todo.id), -1;
+  });
 
   return maxId;
 }
@@ -20,6 +22,8 @@ export const todoReducer = (state = initialState, action) => {
         ...state,
         {
           id: nextTodosId(state),
+          text: action.payload,
+          completed: false,
         },
       ];
     case TOGGLED:
@@ -58,7 +62,7 @@ export const todoReducer = (state = initialState, action) => {
       });
 
     case CLEARCOMPLETED:
-      return state.filter((item) => !item.completed);
+      return state.map((item) => ({ ...item, completed: false }));
 
     default:
       return state;
