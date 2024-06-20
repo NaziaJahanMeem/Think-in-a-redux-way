@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMatch, useNavigate } from "react-router-dom";
 import searchImage from "../../assets/search.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { searched } from "../../features/filter/filterSlice";
@@ -9,9 +10,17 @@ const Search = () => {
 
   const [input, setInput] = useState(search);
 
+  const match = useMatch("/");
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searched(input));
+
+    // if user is not in home page , redirect to home page
+    if (!match) {
+      navigate("/");
+    }
   };
 
   return (

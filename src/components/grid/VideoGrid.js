@@ -6,13 +6,14 @@ import { Loading } from "../ui/Loading";
 
 const VideoGrid = () => {
   const dispatch = useDispatch();
+  const { tags, search } = useSelector((state) => state.filter);
   const { videos, isLoading, isError, error } = useSelector(
     (state) => state.videos
   );
 
   useEffect(() => {
-    dispatch(fetchVideos());
-  }, [dispatch]);
+    dispatch(fetchVideos({ tags, search }));
+  }, [dispatch, tags, search]);
 
   // decide what to render
   let content;
