@@ -5,7 +5,7 @@ import VideoDescription from "./../components/description/VideoDescription";
 import RelatedVideoList from "./../components/list/RelatedVideoList";
 import VideoPlayer from "../components/description/Player";
 import { fetchVideo } from "./../features/video/videoSlice";
-import Loading from "./../components/ui/Loading";
+import { Loading } from "./../components/ui/Loading";
 
 const Video = () => {
   const { video, isLoading, isError, error } = useSelector(
