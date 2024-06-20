@@ -1,1 +1,1 @@
-# 6.5 - 6.6 Videos featured 1 & 2
+# 6.7 - 6.8 tags featured 1 & 2
