@@ -19,7 +19,6 @@ export default function Login() {
   };
 
   useEffect(() => {
-    console.log(responseError);
     if (responseError?.data) {
       setError(responseError?.data);
     }
